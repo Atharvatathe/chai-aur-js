@@ -54,15 +54,3 @@ console.log(addTwo(3, 4))
 // const myArray = [2, 5, 3, 7, 8]
 
 // myArray.forEach()
-
-/* Normal Functions:
-this is dynamically bound to the object that calls the function. 
-The value of this depends on how the function is invoked (e.g., as a method, standalone function, or constructor). 
-In an object method, this refers to the object itself. 
-In a standalone function, this often refers to the global object (e.g., window in a browser) or undefined in strict mode. */
-
-/* Arrow Functions:
-this is lexically bound, meaning it takes its value from the surrounding context where the arrow function is defined. 
-Arrow functions do not have their own this binding; they inherit it from their surrounding scope. 
-If an arrow function is defined within an object method, this will still refer to the global object (or undefined in strict mode), even if the method is called on the object. 
-Arrow functions are often used in callbacks and event listeners, where the surrounding context is often the window object or a specific element. */
