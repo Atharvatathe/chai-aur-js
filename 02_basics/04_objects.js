@@ -63,10 +63,10 @@ const course = {
 
 // course.courseInstructor
 
-const {courseInstructor: instructor} = course       // de-structure gareko. "courseInstructor" ko saato aba "instructor" lekhna milxa.
+//const {courseInstructor: instructor} = course       // de-structure gareko. "courseInstructor" ko saato aba "instructor" lekhna milxa.
 
 // console.log(courseInstructor);
-console.log(instructor);
+//console.log(instructor);
 
 // {
 //     "name": "hitesh",
@@ -81,6 +81,42 @@ console.log(instructor);
 ]
 
 
+//shallow copy and deep copy
+//1. shallow copy
+
+// let original = {
+//     name: "Alice",
+//     address: {
+//         city: "New York"
+//     }
+// };
+
+// console.log("Original object before shallow copy:", original);
+
+// let shallowCopyObject = original;
+// shallowCopyObject.name = "Alice jane"
+// shallowCopyObject.address.city = "London"
+
+// console.log("Original object after shallow copy:", original);
+// console.log("shallow copp object:", shallowCopyObject);
+
+//1. Deep copy
+
+let originalDeep = {
+    name: "Alice",
+    address: {
+        city: "New York"
+    }
+};
+
+console.log("Original object before deep copy:", originalDeep);
+
+let deepCopyObject = JSON.parse(JSON.stringify(originalDeep));
+deepCopyObject.name = "Alice jane"
+deepCopyObject.address.city = "London"
+
+console.log("Original object after deep copy:", originalDeep);
+console.log("deep copy object:", deepCopyObject);
 
 // fake api resource :-  randomusermeapi
 // Api bujhna laai time spend garna parxa tesko laagi pani site xa:  json formatter
